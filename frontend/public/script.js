@@ -3,27 +3,36 @@ async function parseJSON(url){
     return response.json();
 }
 
-function swiperComponent(){
+function swiperComponent(dataToRender, rendererFunction){
     return `
     <div class="swiper">
         <div class="swiper-wrapper">
-            <div class="swiper-slide">Slide 1</div>
-            <div class="swiper-slide">Slide 2</div>
-            <div class="swiper-slide">Slide 3</div>
+        ${dataToRender.map( dataObject => rendererFunction(dataObject)).join("")}
         </div>
     </div>
     `;
 }
 
-async function loadEventHandel() {
-    console.log("Page is loaded.");
-    const rootElement = document.getElementById("root");
+function swiperSlideComponent ({filename, title}) {
+    return `
+        <div class="swiper-slide">
+            <h2>${title}</h2>
+            <img src="/pub/image/${filename}">
+        </div>
+    `;
+}
 
+async function loadEventHandel() {
+
+    const rootElement = document.getElementById("root");
     const result = await parseJSON("/image-list");
 
-    rootElement.insertAdjacentHTML(`beforeend`, swiperComponent());
+    rootElement.insertAdjacentHTML(`beforeend`, swiperComponent(result, swiperSlideComponent));
 
-    const swiper = new Swiper(".swiper");
+    const swiper = new Swiper(".swiper", {
+        loop: true
+    });
+    console.log(swiper);
 }
 
 window.addEventListener(`load`, loadEventHandel);

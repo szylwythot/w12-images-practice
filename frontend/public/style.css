@@ -1,4 +1,27 @@
+body{
+    width: 100vw;
+    height: 100vh;
+}
+
 .swiper{
     width: 100%;
+    height: 100%;
+}
+
+#root .swiper .swiper-wrapper .swiper-slide h2{
+    position: absolute;
+    top:0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #f0e2d0;
+    background-color: rgb(74, 74, 165);
+
+    text-transform: capitalize;
+}
+
+#root .swiper .swiper-wrapper .swiper-slide img{
+    width: 100%;
     height: 100vh;
+
+    object-fit: cover;
 }
