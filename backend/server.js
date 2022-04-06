@@ -14,6 +14,7 @@ const frontendPath = path.join(`${__dirname}/../frontend`);
 
 app.use(express.json()); // opcionális
 app.use(`/pub`, express.static(`${frontendPath}/public`));
+app.use(`/dist`, express.static(`${frontendPath}/dist`));
 
 app.get('/', (request, response, next) => { // ez a sima 
     console.log();

@@ -1,6 +1,5 @@
 body{
-    width: 100vw;
-    height: 100vh;
+    font-family: 'Rubik Microbe', cursive;
 }
 
 .swiper{
@@ -13,10 +12,11 @@ body{
     top:0;
     left: 50%;
     transform: translateX(-50%);
-    color: #f0e2d0;
-    background-color: rgb(74, 74, 165);
+    background-color: rgb(74, 74, 165, 0.8);
 
+    color: #f0e2d0;
     text-transform: capitalize;
+
 }
 
 #root .swiper .swiper-wrapper .swiper-slide img{
