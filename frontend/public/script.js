@@ -19,9 +19,11 @@ async function loadEventHandel() {
     console.log("Page is loaded.");
     const rootElement = document.getElementById("root");
 
+    const result = await parseJSON("/image-list");
+
     rootElement.insertAdjacentHTML(`beforeend`, swiperComponent());
 
-    const result = await parseJSON("/image-list");
+    const swiper = new Swiper(".swiper");
 }
 
 window.addEventListener(`load`, loadEventHandel);

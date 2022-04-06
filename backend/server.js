@@ -24,6 +24,6 @@ app.get(`/image-list`, (request, response, next) => {
     response.sendFile(`${frontendPath}/data.json`);
 });
 
-app.listen(port, () => {
+app.listen(port, () => { // ez mindig a levégére menjen
     console.log(ipAddress);
 });
