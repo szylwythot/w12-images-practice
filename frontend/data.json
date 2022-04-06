@@ -1,14 +1,42 @@
 [
     {
         "filename": "kovek.jpg",
-        "title": "kovek"
+        "title": "stones"
     },
     {
         "filename": "ozike.jpg",
-        "title": "ozike"
+        "title": "dear"
     },
     {
-        "filename": "szilvi_background.jpg",
-        "title": "couple"
+        "filename": "blackNwhite.jpg",
+        "title": "walk"
+    },
+    {
+        "filename": "bokor.jpg",
+        "title": "bush"
+    },
+    {
+        "filename": "child.jpg",
+        "title": "child"
+    },
+    {
+        "filename": "connection.jpg",
+        "title": "connection"
+    },
+    {
+        "filename": "cserszomorce.jpg",
+        "title": "cserszömörce/tan"
+    },
+    {
+        "filename": "grapes.jpg",
+        "title": "grapes"
+    },
+    {
+        "filename": "kissing.jpg",
+        "title": "kissing"
+    },
+    {
+        "filename": "leaves.jpg",
+        "title": "leaves"
     }
 ]
